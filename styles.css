@@ -314,3 +314,100 @@ a {
     width: 1.2rem;
     height: 1.2rem;
 }
+
+/* Branding */
+.university-brand {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+}
+
+.course-code {
+    color: var(--muted-foreground);
+    font-weight: 400;
+}
+
+/* Team Section */
+.team-section {
+    margin-top: 5rem;
+    text-align: left;
+    border-top: 1px solid var(--border);
+    padding-top: 3rem;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    letter-spacing: -0.02em;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    /* Reduced gap */
+    max-width: 56rem;
+    /* Constrain width to keep them closer */
+    margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border-radius: var(--radius);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.team-member:hover {
+    background-color: var(--accent);
+    /* Subtle hover background */
+    transform: translateY(-4px);
+    /* Slight lift */
+}
+
+.team-avatar {
+    width: 140px;
+    /* Larger size */
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid var(--background);
+    /* Clean border seamlessly blending with bg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    /* Nice shadow */
+    background-color: var(--card);
+}
+
+.team-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--foreground);
+    margin-bottom: 0.25rem;
+}
+
+.team-role {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
